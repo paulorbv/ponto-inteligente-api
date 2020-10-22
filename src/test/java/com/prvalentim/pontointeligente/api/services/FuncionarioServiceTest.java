@@ -42,13 +42,13 @@ public class FuncionarioServiceTest {
 	}
 
 	@Test
-	public void testBuscarEmpresaPorCPF() {
+	public void testBuscarFuncionarioPorCPF() {
 		Optional<Funcionario> funcionario = funcionarioService.buscarPorCpf(CPF);
 		assertTrue(funcionario.isPresent());
 	}
 	
 	@Test
-	public void testBuscarEmpresaPorEmail() {
+	public void testBuscarFuncionarioPorEmail() {
 		Optional<Funcionario> funcionario = funcionarioService.buscarPorEmail(EMAIL);
 		assertTrue(funcionario.isPresent());
 	}
@@ -60,7 +60,7 @@ public class FuncionarioServiceTest {
 	}
 
 	@Test
-	public void testPersistEmpresa() {
+	public void testPersistFuncionario() {
 		Funcionario funcionario = funcionarioService.persistir(Funcionario.builder().build());
 		assertNotNull(funcionario);
 	}
